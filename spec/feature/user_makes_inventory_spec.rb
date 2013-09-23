@@ -13,11 +13,11 @@ feature 'User can make an inventory', %Q{
   #   If I specify the required information, my inventory entry is recorded.
 
   scenario 'User makes successful inventory' do
-    visit new_inventories_path
+    visit new_inventory_path
     fill_in 'Title', with: 'Tasty fish'
     fill_in 'Description', with: 'VERY TASTY'
     fill_in 'Quantity', with: 1337
-    click__button('Create Inventory')
-    expect(page).to have('Inventory was created!')
+    click_button('Create Inventory')
+    expect(page).to have_content('Inventory was created!')
   end
 end

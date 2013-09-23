@@ -1,0 +1,6 @@
+<%= simple_form_for @inventory do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description, hint: 'is this a tiptool?' %>
+  <%= f.input :quantity %>
+  <%= f.button :submit %>
+<%- end -%>
